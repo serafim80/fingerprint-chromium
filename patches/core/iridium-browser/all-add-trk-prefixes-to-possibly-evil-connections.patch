@@ -342,20 +342,6 @@ by default.
  const char kDownstreamUrl[] = "/down?";
  const char kUpstreamUrl[] = "/up?";
  
---- a/content/browser/webauth/webauth_request_security_checker.h
-+++ b/content/browser/webauth/webauth_request_security_checker.h
-@@ -85,9 +85,9 @@ class CONTENT_EXPORT WebAuthRequestSecur
-   // Legacy App IDs, which google.com origins are allowed to assert for
-   // compatibility reasons.
-   static constexpr char kGstaticAppId[] =
--      "https://www.gstatic.com/securitykey/origins.json";
-+      "trk:276:https://www.gstatic.com/securitykey/origins.json";
-   static constexpr char kGstaticCorpAppId[] =
--      "https://www.gstatic.com/securitykey/a/google.com/origins.json";
-+      "trk:277:https://www.gstatic.com/securitykey/a/google.com/origins.json";
- 
-   explicit WebAuthRequestSecurityChecker(RenderFrameHost* host);
-   WebAuthRequestSecurityChecker(const WebAuthRequestSecurityChecker&) = delete;
 --- a/content/shell/browser/shell_browser_main_parts.cc
 +++ b/content/shell/browser/shell_browser_main_parts.cc
 @@ -85,7 +85,7 @@ GURL GetStartupURL() {
