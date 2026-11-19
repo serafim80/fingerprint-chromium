@@ -1,0 +1,16 @@
+# Google Chrome exposes HTMLAnchorElement.hrefTranslate because translate is available
+# (API key + offer-translate pref). ungoogled has neither, so the attribute disappears and
+# the anchor prototype has one property less than real Chrome. Report the service as
+# available; actual translation stays off (it still needs --translate-script-url).
+
+--- a/chrome/browser/chrome_content_browser_client.cc
++++ b/chrome/browser/chrome_content_browser_client.cc
+@@ -4890,7 +4890,7 @@ void ChromeContentBrowserClient::OverrideWebPreferences(
+   web_prefs->root_scrollbar_theme_color =
+       GetRootScrollbarThemeColor(web_contents);
+
+-  web_prefs->translate_service_available = TranslateService::IsAvailable(prefs);
++  web_prefs->translate_service_available = true;
+
+   std::optional<ui::CaptionStyle> style =
+       captions::GetCaptionStyleFromUserSettings(prefs,

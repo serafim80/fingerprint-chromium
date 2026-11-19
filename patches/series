@@ -126,3 +126,4 @@ extra/fingerprint/016-webgl-readPixels.patch
 extra/fingerprint/018-timezone.patch
 extra/fingerprint/020-webgl-getparameter-timing.patch
 extra/fingerprint/021-device-memory-cap.patch
+extra/serafim80/expose-href-translate.patch
