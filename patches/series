@@ -115,7 +115,6 @@ extra/fingerprint/002-user-agent-fingerprint.patch
 extra/fingerprint/003-audio-fingerprint.patch
 extra/fingerprint/005-hardware-concurrency-fingerprint.patch
 extra/fingerprint/006-font-fingerprint.patch
-extra/fingerprint/007-shadow-root.patch
 extra/fingerprint/009-webdriver.patch
 extra/fingerprint/010-headless.patch
 extra/fingerprint/011-gpu-info.patch
